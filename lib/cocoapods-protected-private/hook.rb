@@ -1,0 +1,1 @@
+require 'cocoapods-protected-private/hook/resolver'
