@@ -1,1 +1,1 @@
-require 'cocoapods-protected-private/hook/resolver'
+require 'cocoapods-protected-dependencies/hook/resolver'

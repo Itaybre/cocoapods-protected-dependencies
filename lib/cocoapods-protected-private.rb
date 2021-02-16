@@ -1,1 +1,1 @@
-require 'cocoapods-protected-private/gem_version'
+require 'cocoapods-protected-dependencies/gem_version'

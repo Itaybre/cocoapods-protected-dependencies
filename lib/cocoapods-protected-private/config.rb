@@ -15,12 +15,12 @@ module CocoapodsProtectedPrivate
         end
 
         def load_configuration
-            unless File.file?('private-specs.yml')
-                Pod::UI.puts "No 'private-specs.yml' file, make sure you have created one".red
+            unless File.file?('protected-specs.yml')
+                Pod::UI.puts "No 'protected-specs.yml' file, make sure you have created one".red
                 return
             end
 
-            @config = YAML.load(File.read('private-specs.yml'))
+            @config = YAML.load(File.read('protected-specs.yml'))
         end
 
         def filter_dependency(pod, specifications)

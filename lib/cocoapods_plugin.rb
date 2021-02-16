@@ -1,6 +1,6 @@
 require 'cocoapods'
 require 'cocoapods-core'
-require 'cocoapods-protected-private/hook'
+require 'cocoapods-protected-dependencies/hook'
 
 module CocoapodsProtectedPrivate
 end    

@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cocoapods-protected-private/gem_version.rb'
+require 'cocoapods-protected-dependencies/gem_version.rb'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'cocoapods-protected-private'
+  spec.name          = 'cocoapods-protected-dependencies'
   spec.version       = CocoapodsProtectedPrivate::VERSION
   spec.authors       = ['itay']
   spec.email         = ['itay@itaysoft.com']
   spec.description   = 'CocoaPods is vulnerable to duplicated Pods in Private and Public repos, this plugin provides a way to prevent a dependency from using a different source'
   spec.summary       = 'Protect your project from being vulnerable to Dependency Confusion'
-  spec.homepage      = 'https://github.com/itaybre/cocoapods-protected-private'
+  spec.homepage      = 'https://github.com/itaybre/cocoapods-protected-dependencies'
   spec.license       = 'MIT'
 
   spec.files         = Dir['lib/**/*']

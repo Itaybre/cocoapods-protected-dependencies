@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in cocoapods-protected-private.gemspec
+# Specify your gem's dependencies in cocoapods-protected-dependencies.gemspec
 gemspec
 
 group :development do

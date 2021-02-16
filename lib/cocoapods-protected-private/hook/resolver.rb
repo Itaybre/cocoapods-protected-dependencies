@@ -1,4 +1,4 @@
-require 'cocoapods-protected-private/config'
+require 'cocoapods-protected-dependencies/config'
 
 module Pod
     class Resolver
