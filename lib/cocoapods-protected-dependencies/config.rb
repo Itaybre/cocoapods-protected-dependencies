@@ -5,6 +5,7 @@ module CocoapodsProtectedPrivate
     class Configuration
         include Singleton
         attr_accessor :config
+        attr_accessor :config_loaded
 
         def config
             @config ||= []
@@ -17,13 +18,17 @@ module CocoapodsProtectedPrivate
         def load_configuration
             unless File.file?('protected-specs.yml')
                 Pod::UI.puts "No 'protected-specs.yml' file, make sure you have created one".red
+                @config_loaded = false
                 return
             end
 
             @config = YAML.load(File.read('protected-specs.yml'))
+            @config_loaded = true
         end
 
         def filter_dependency(pod, specifications)
+            return specifications unless @config_loaded
+
             filtered = specifications.select { |spec| spec_is_valid(pod, spec) }
 
             Pod::UI.puts "Dependency #{pod} is not allowed".red if filtered.empty?
